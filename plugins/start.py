@@ -76,7 +76,7 @@ async def start_command(client: Client, message: Message):
                     InlineKeyboardButton("🔥 ᴏᴘᴇɴ", callback_data = "about"),
                     InlineKeyboardButton("🔒 ᴄʟᴏsᴇ", callback_data = "close")
                 ],[
-                    InlineKeyboardButton("ᴠɪᴅᴇᴏ ᴠɪʀᴀʟ", url="https://t.me/asupanindoviraals")
+                    InlineKeyboardButton("ᴠɪᴅᴇᴏ ᴠɪʀᴀʟ", url="https://t.me/bokepviralindonesia_terbaru")
                   ]
             ]
         )
@@ -96,14 +96,14 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>AKSES ANDA DI TOLAK !!\nWajib join channel/group dibawah ini agar akses diterima\n\nJoin Klik Di Bawah Ini</b>"
+    text = "<b>AKSES ANDA DI TOLAK !!\nWAJIB JOIN CHANNEL dibawah ini supaya Anda bisa melihat Videonya\n\nJoin Klik Di Bawah Ini</b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>dan <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
+        text = text + f" <b>dan KLIK <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
     except ValueError:
         pass
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel", url = client.invitelink)]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("JOIN CHANNEL", url = client.invitelink)]])
     await message.reply(
         text = text,
         reply_markup = reply_markup,
